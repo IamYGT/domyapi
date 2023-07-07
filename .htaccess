@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^([a-z]+)\/?$ $1.php [NC]
+RewriteRule blog-(.*)\.html$ blog-detay.php?url=$1
+RewriteRule kurumsal-(.*)\.html$ kurumsal.php?url=$1
+RewriteRule hizmet-(.*)\.html$ hizmet-detay.php?url=$1
+RewriteRule urun-(.*)\.html$ urun-detay.php?url=$1
+RewriteRule proje-(.*)\.html$ proje-detay.php?url=$1
+
+ 
